@@ -1,0 +1,2 @@
+### Check Readme for info on editing this file
+SUBSYSTEM=="block", ENV{DEVTYPE}=="partition", ACTION=="add", ATTRS{idVendor}=="XXXX", ATTRS{idProduct}=="YYYY", RUN+="/path/to/usb_inserted.sh"
