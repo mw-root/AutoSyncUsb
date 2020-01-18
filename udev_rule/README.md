@@ -15,3 +15,8 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
 
 In the example above, I want to use the SanDisk drive, my Vendor ID is ```0781```, Product ID is ```5583```
+
+For the case above, the udev rule would look like this
+```
+SUBSYSTEM=="block", ENV{DEVTYPE}=="partition", ACTION=="add", ATTRS{idVendor}=="0781", ATTRS{idProduct}=="5583", RUN+="/path/to/usb_inserted.sh"
+```
